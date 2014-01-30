@@ -1,0 +1,20 @@
+﻿
+<div ng-controller="routController">
+    <div style="position: relative;">
+        <div class="content">
+            <h3>
+                {{practices[selectedId].header}}</h3>
+        </div>
+        <div class="panel panel-default">
+            <div>
+                <ul>
+                    <li ng-repeat="item in practices[selectedId].items track by $index" ng-bind-html="item"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <ul class="pager">
+        <li class="pull-left previd"><a href="#/{{practices[prevId].practiceId}}"> {{(prevheader)}} </a> </li>
+        <li class="pull-right nextid"><a href="#/{{practices[nextId].practiceId}}"> {{practices[nextId].header}}</a> </li>
+    </ul>
+</div>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bestPracticesApp" id="top">
+<head>
+    <meta charset="utf-8">
+    <title>Hospitals Insurance Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="description" content="AngularJS (Angular) native directives for Twitter Bootstrap. Small footprint (5kB gzipped!), no 3rd party JS dependencies (jQuery, bootstrap JS) required! Widgets: Accordion, Alert, Buttons, Carousel, Collapse, Datepicker, Dropdown Toggle, Modal, Pagination, Popover, Progressbar, Rating, Tabs, Timepicker, Tooltip, Typeahead, ">
+    <meta name="google-site-verification" content="7lc5HyceLDqpV_6oNHteYFfxDJH7-S3DwnJKtNUKcRg" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/rainbow.css" />
+    <link rel="stylesheet" href="assets/demo.css" />
+    <link rel="author" href="https://github.com/angular-ui/bootstrap/graphs/contributors">
+    <link href="css/animate.css" type="text/css" rel="stylesheet">
+    <style>
+        body
+        {
+            padding-top: 50px;
+            background-color: #006fba;
+            overflow: hidden;
+        }
+        #help, #bookmarkme
+        {
+            cursor: pointer;
+        }
+        #help span, #bookmarkme span
+        {
+            margin: 1px 5px;
+        }
+        
+        .content
+        {
+            background-color: #006fba;
+            padding: 10px 15px 10px;
+            font-size: 16px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(0,0,0,.15);
+            background-color: #006fba;
+            color: White;
+        }
+        .list-group ul
+        {
+            -webkit-padding-start: 0px;
+        }
+        
+        .in > .navcontainer
+        {
+        }
+        
+
+.nextid
+{
+    content: "";
+ color:White !important;
+}
+
+    </style>
+</head>
+<body class="ng-cloak">
+    <!--
+    <div style="width: 100px;">
+        <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100" style="width: 0%">
+                <span class="sr-only">0% Complete</span>
+            </div>
+        </div>
+    </div>
+ -->
+    <header class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <div class="hicicon" style="float: left;">
+                    <a href="#home">
+                        <img class="img-rounded" style="height: 40px; margin: 6px 6px 0px 6px;" src="img/hicicon.png" />
+                    </a>
+                </div>
+                <a class="navbar-brand" data-toggle="popover" data-placement="bottom" title="" data-content="Click here to return to the previous screen"
+                    role="button" style="font-size: 1em;" href="#">HIC</a>
+            </div>
+            <nav class="navbar-collapse bs-navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
+                <div class="navcontainer">
+                    <ul class="nav navbar-nav">
+                        <li><a id="help"><span class="glyphicon glyphicon-question-sign"></span>Help</a>
+                        </li>
+                        <li><a id="bookmarkme"><span class="glyphicon glyphicon-bookmark"></span>Bookmark</a>
+                        </li>
+
+                        <!--SEARCH
+                    <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        Submit</button>
+                    </form>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div>
+
+</div>
+    <div class="view-animate-container">
+
+        <div ng-view  class="view-animate">
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-sanitize.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-resource.min.js"></script>
+    <script src="ui-bootstrap-tpls-0.7.0.js"></script>
+    <script src="assets/plunker.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+    <script src="assets/rainbow.js"></script>
+    <script src="assets/rainbow-generic.js"></script>
+    <script src="assets/rainbow-javascript.js"></script>
+    <script src="assets/rainbow-html.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+
+        /*Loading*/
+
+        $(document).ready(function () {
+            /*
+            var progress = setInterval(function () {
+            var $bar = $('.progress-bar');
+
+            if ($bar.width() >= 100) {
+            clearInterval(progress);
+            $('.progress').removeClass('active');
+            } else {
+            $bar.width($bar.width() + 100);
+                  
+            }
+              
+            }, 1000);
+            */
+            var main123 = new main();
+
+            $(".list-group li").click(
+            function () {
+                $($($(".container")[1]).children().children()).addClass(" slideOutRight");
+                main123.init(this);
+            });
+            $(".navbar-brand, .hicicon").click(
+            function () {
+                main123.navbarClick(this);
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37467169-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿
+    <div  class="content" style="width: 100%">
+            <h1>
+                Best Practices for Obstetrics</h1>
+            <p style='color: #e8f1ff'>
+                Find all of HIC's reccomended best practices for Obstetrics here!</p>
+        </div>
+
+        <div class='list-group' ng-controller="ngBindHtmlCtrl">
+           
+                <a class='list-group-item' ng-repeat="practice in practices"href="#/{{practice.practiceId}}">
+                    {{practice.header}}</a>
+           
+        </div>
+  
+
